@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./Pages/Home";
@@ -17,8 +17,20 @@ import SingleProduct from './Pages/SingleProduct';
 function App () {
 
 
-  const { loggedUser } = useContext(UserContext);
+  const { loggedUser, setLoggedUser } = useContext(UserContext);
 
+
+
+
+  // eslint-disable-next-line
+  useEffect(() => {
+    const savedUser = sessionStorage.getItem('loggedInUser');
+    console.log(savedUser);
+    if (savedUser) {
+      setLoggedUser(JSON.parse(savedUser));
+    }
+  }, []);
+  // Load the logged-in user from session storage when the app loads
 
   const ProtectedRoute = ({ children }) => {
     if (loggedUser.length === 0) {
@@ -27,6 +39,7 @@ function App () {
       return children;
     }
   };
+
 
 
   return (

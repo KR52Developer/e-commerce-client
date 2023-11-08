@@ -79,7 +79,7 @@ const SingleProduct = () => {
                         </div>
                         <div className='detailsContainer'>
                             <h2>{singleProduct.title}</h2>
-                            <p>Price: ${singleProduct.price}</p>
+                            <p>Price: Rs.{singleProduct.price}</p>
                             <p>{singleProduct.description}</p>
                             <button onClick={() => addToCart(singleProduct)}>Add to Cart</button>
                         </div>

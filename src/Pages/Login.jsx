@@ -8,6 +8,8 @@ const Login = () => {
 
 
     const { users, setLoggedUser } = useContext(UserContext);
+    const [emailCopySuccess, setEmailCopySuccess] = useState('');
+    const [passwordCopySuccess, setPasswordCopySuccess] = useState('');
     // console.log(users);
 
     const [loginUser, setloginUser] = useState({
@@ -66,6 +68,21 @@ const Login = () => {
     };
 
 
+    const copyToClipboard = async (text, type) => {
+        try {
+            await navigator.clipboard.writeText(text);
+            if (type === 'email') {
+                setEmailCopySuccess('Copied!');
+                setTimeout(() => setEmailCopySuccess(''), 1000);
+            } else if (type === 'password') {
+                setPasswordCopySuccess('Copied!');
+                setTimeout(() => setPasswordCopySuccess(''), 1000);
+            }
+        } catch (err) {
+            console.error('Failed to copy text: ', err);
+        }
+    };
+
 
 
     return (
@@ -88,6 +105,10 @@ const Login = () => {
 
                         <button>Login</button>
                         {error && <span className='error'>{errorText}</span>}
+                        <span title="Click to copy the mail" style={{ cursor: 'pointer' }} onClick={() => copyToClipboard('testuser@gmail.com', 'email')}> email: testuser@gmail.com</span>
+                        {emailCopySuccess && <span style={{ color: 'green' }}>{emailCopySuccess}</span>}
+                        <span title="Click to copy the password" style={{ cursor: 'pointer' }} onClick={() => copyToClipboard('123456789', 'password')}> password: 123456789</span>
+                        {passwordCopySuccess && <span style={{ color: 'green' }}>{passwordCopySuccess}</span>}
                         <p>New User?<Link to="/register"> Register here!</Link ></p>
                     </form>
                 </div>
