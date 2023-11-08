@@ -59,7 +59,7 @@ export const CartContextProvider = ({ children }) => {
 
             fetchCart();
         }
-    }, [loggedUser, state.cart]);
+    }, [loggedUser, state.cart, _id]);
 
 
 
