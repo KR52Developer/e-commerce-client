@@ -37,8 +37,9 @@ export const CartContextProvider = ({ children }) => {
 
 
 
-    if (loggedUser) {
-        useEffect(() => {
+
+    useEffect(() => {
+        if (loggedUser) {
             const fetchCart = async () => {
                 try {
                     // console.log(_id);
@@ -57,8 +58,10 @@ export const CartContextProvider = ({ children }) => {
             };
 
             fetchCart();
-        }, [loggedUser, state.cart]);
-    }
+        }
+    }, [loggedUser, state.cart]);
+
+
 
 
 
