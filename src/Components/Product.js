@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { CartContext } from '../Context/ProductContext';
 import { UserContext } from '../Context/UserContext';
 import axios from 'axios';
@@ -11,9 +11,9 @@ const Product = () => {
     const { loggedUser } = useContext(UserContext);
     // console.log(loggedUser._id);
 
-    const [quantity, setQuantity] = useState(1);
+    // const [quantity, setQuantity] = useState(1);
     // console.log(quantity);
-    const [itemId, setItemId] = useState("");
+    // const [itemId, setItemId] = useState("");
 
 
 

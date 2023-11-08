@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import Header from '../Components/Header';
 import { CartContext } from '../Context/ProductContext';
 import axios from 'axios';

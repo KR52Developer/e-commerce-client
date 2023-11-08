@@ -1,15 +1,13 @@
-import React, { useContext } from 'react';
-import { UserContext } from '../Context/UserContext';
 import Header from '../Components/Header';
 import Slide from '../Components/Slide';
-import Category from '../Components/Category';
-import Products from './Products';
+// import Category from '../Components/Category';
+// import Products from './Products';
 import Product from '../Components/Product';
 import Footer from '../Components/Footer';
 
 const Home = () => {
 
-    const { loggedUser } = useContext(UserContext);
+    // const { loggedUser } = useContext(UserContext);
     // console.log(loggedUser);
     return (
         <div>

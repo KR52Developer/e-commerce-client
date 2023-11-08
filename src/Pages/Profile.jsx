@@ -10,8 +10,8 @@ import Footer from '../Components/Footer';
 const Profile = () => {
     const navigate = useNavigate();
     const { loggedUser } = useContext(UserContext);
-    const loggedInUser = loggedUser;
-    // console.log(loggedInUser);
+    // const loggedInUser = loggedUser;
+    // // console.log(loggedInUser);
     const [user, setUser] = useState(loggedUser);
     // console.log(user);
 

@@ -49,7 +49,7 @@ const Login = () => {
 
             if (getLoggedinUserDetails) {
                 setLoggedUser(getLoggedinUserDetails);
-                const { _id } = getLoggedinUserDetails;
+                // const { _id } = getLoggedinUserDetails;
                 // console.log(_id);
                 alert("User successfully logged in");
                 navigate(`/`);

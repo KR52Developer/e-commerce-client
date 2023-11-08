@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroBanner from '../images/heroBanneredited.jpg';
+// import HeroBanner from '../images/heroBanneredited.jpg';
 
 const Slide = () => {
     return (

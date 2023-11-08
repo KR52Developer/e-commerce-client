@@ -41,7 +41,6 @@ const Header = () => {
 
                         <div className='accountContainer'>
                             {loggedUser.userName && <span style={{
-                                backgroundColor: '#0199cb',
                                 padding: '5pX 10px',
                                 borderRadius: '50%',
                                 backgroundColor: '#0199cb',
