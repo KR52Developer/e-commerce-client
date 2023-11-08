@@ -8,14 +8,14 @@ import { CartContext } from '../Context/ProductContext';
 
 const SingleProduct = () => {
     const { loggedUser } = useContext(UserContext);
-    const [user, setUser] = useState(loggedUser);
+    // const [user, setUser] = useState(loggedUser);
     // console.log(user);
     const { id } = useParams();
     // console.log(id);
     const [singleProduct, setSingleProduct] = useState();
 
     // console.log(singleProduct);
-    const { products, setProducts, state: { cart }, dispatch } = useContext(CartContext);
+    const { state: { cart }, dispatch } = useContext(CartContext);
 
     useEffect(() => {
         const fetchSingleProduct = async () => {
