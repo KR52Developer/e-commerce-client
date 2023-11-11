@@ -24,7 +24,7 @@ export const CartContextProvider = ({ children }) => {
 
 
     useEffect(() => {
-        axios.get("https://orange-red-hermit-crab-yoke.cyclic.app/api/v1/products")
+        axios.get("https://rich-blue-anemone-yoke.cyclic.app/api/v1/products")
             .then((res) => {
                 console.log(res);
                 setProducts(res.data.products);
@@ -43,7 +43,7 @@ export const CartContextProvider = ({ children }) => {
             const fetchCart = async () => {
                 try {
                     // console.log(_id);
-                    const res = await axios.get(`https://orange-red-hermit-crab-yoke.cyclic.app/api/v1/cart/${_id}`);
+                    const res = await axios.get(`https://rich-blue-anemone-yoke.cyclic.app/api/v1/cart/${_id}`);
                     // console.log(res);
                     let cart = res.data;
                     // console.log(cart);

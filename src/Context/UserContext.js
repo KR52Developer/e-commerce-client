@@ -25,7 +25,7 @@ export const UserContextProvider = ({ children }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get("https://orange-red-hermit-crab-yoke.cyclic.app/api/v1/users");
+                const res = await axios.get("https://rich-blue-anemone-yoke.cyclic.app/api/v1/users");
                 setUsers(res.data.users);
             } catch (error) {
                 console.log(error);

@@ -39,7 +39,7 @@ const Cart = () => {
         // console.log(prod._id);
         axios
             .delete(
-                `https://orange-red-hermit-crab-yoke.cyclic.app/api/v1/cart/remove/${prod._id}`
+                `https://rich-blue-anemone-yoke.cyclic.app/api/v1/cart/remove/${prod._id}`
             )
             .then((response) => {
                 console.log("Product removed from cart:", response.data);
@@ -71,7 +71,7 @@ const Cart = () => {
         let emptyCart = [
             {}
         ];
-        axios.delete(`https://orange-red-hermit-crab-yoke.cyclic.app/api/v1/cart/delete/${loggedUser._id}`)
+        axios.delete(`https://rich-blue-anemone-yoke.cyclic.app/api/v1/cart/delete/${loggedUser._id}`)
             .then((res) => {
 
                 dispatch({

@@ -141,7 +141,7 @@ const Product = () => {
                                     dispatch({ type: 'UPDATE_CART', payload: newCart });
 
                                     // Update the cart in the backend
-                                    await axios.patch(`https://orange-red-hermit-crab-yoke.cyclic.app/api/v1/cart/update/${loggedUser._id}`, {
+                                    await axios.patch(`https://rich-blue-anemone-yoke.cyclic.app/api/v1/cart/update/${loggedUser._id}`, {
                                         userId: loggedUser._id,
                                         productId: product._id,
                                         quantity: updatedProduct.quantity
@@ -154,7 +154,7 @@ const Product = () => {
                                     dispatch({ type: 'ADD_TO_CART', payload: [...cart, newProduct] });
 
                                     // Add the product to the cart in the backend
-                                    await axios.post("https://orange-red-hermit-crab-yoke.cyclic.app/api/v1/cart/add", {
+                                    await axios.post("https://rich-blue-anemone-yoke.cyclic.app/api/v1/cart/add", {
                                         userId: loggedUser._id,
                                         productId: product._id,
                                         quantity: newProduct.quantity

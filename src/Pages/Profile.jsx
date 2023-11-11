@@ -45,7 +45,7 @@ const Profile = () => {
 
         // console.log(updatedUser);
 
-        await axios.put(`https://orange-red-hermit-crab-yoke.cyclic.app/api/v1/users/${user._id}`, updatedUser)
+        await axios.put(`https://rich-blue-anemone-yoke.cyclic.app/api/v1/users/${user._id}`, updatedUser)
             .then((updatedUser) => {
                 alert("User details updated successfully");
             })
@@ -58,7 +58,7 @@ const Profile = () => {
 
     const handleDelete = async (e) => {
         if (window.confirm("Are you to delete the user")) {
-            await axios.delete(`https://orange-red-hermit-crab-yoke.cyclic.app/api/v1/users/${user._id}`)
+            await axios.delete(`https://rich-blue-anemone-yoke.cyclic.app/api/v1/users/${user._id}`)
                 .then((deleteduser) => {
                     alert("User Deleted successfully");
                     sessionStorage.removeItem("loggedInUser");
